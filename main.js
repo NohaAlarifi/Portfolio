@@ -164,18 +164,21 @@ dotsA[slideIndexA - 1].className += "active";
 
 //////////////////////////////////////////////////////////////////////////
 
-
-
-
 window.onscroll= function onScroll(){
 
 let value = scrollY;
 
-douwnload_botton.style.bottom = (value+740)+ 'px';
-douwnload_botton.style.left = (value+20)+ 'px';
+douwnload_botton.style.bottom = (value + 740)+ 'px';
+douwnload_botton.style.right = (value - 340)+ 'px';
+
+
+
 image.style.top = value+ 'px';
 content.style.bottom = (value + 675)+ 'px';
 
+if(scrollY >= 500){
+    douwnload_botton.style.display = 'block';
+}
 
 
 
@@ -186,7 +189,6 @@ if (scrollY >= 1100 ){
     image.style.display='block';
 }
 }
-
 
 
 
